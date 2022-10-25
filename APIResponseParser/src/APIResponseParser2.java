@@ -1,3 +1,4 @@
+
 public class APIResponseParser2 {
 
     /**
@@ -12,14 +13,16 @@ public class APIResponseParser2 {
 
         //String startRule = "<title>"; // first example
         //String startRule = "<name>"; // second example
-        String startRule = "<image_url>"; // third example
-        String title = parse(response, startRule, endRule);
+        //String startRule = "<image_url>"; // third example
+        String startRule = "<original_publication_year type=\"integer\">";
+        String total = parse(response, startRule, endRule);
         //book.setTitle(title); // 1
         //book.setAuthor(title); //2
-        book.setImageUrl(title); //3
+        //book.setImageUrl(title); //3
+        book.setPublicationYear(Integer.parseInt(total));
         //System.out.println(book.getTitle()); //1
         //System.out.println(book.getAuthor()); //2
-        System.out.println(book.getImageUrl()); //3
+        System.out.println(book.getPublicationYear()); //3
 
 
         // Your code
@@ -35,7 +38,7 @@ public class APIResponseParser2 {
             return response.substring(startIndex,endIndex);
 
         }
-            return null;
+        return null;
     }
 
     public static void main(String[] args) {
