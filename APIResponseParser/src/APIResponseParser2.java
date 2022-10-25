@@ -20,9 +20,7 @@ public class APIResponseParser2 {
         //book.setAuthor(title); //2
         //book.setImageUrl(title); //3
         book.setPublicationYear(Integer.parseInt(total));
-        //System.out.println(book.getTitle()); //1
-        //System.out.println(book.getAuthor()); //2
-        System.out.println(book.getPublicationYear()); //3
+        System.out.println(book.getPublicationYear());
 
 
         // Your code
