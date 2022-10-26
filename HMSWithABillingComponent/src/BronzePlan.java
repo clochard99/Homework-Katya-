@@ -1,7 +1,7 @@
 public class BronzePlan extends HealthInsurancePlan{
 
     public BronzePlan() {
-        setCoverage(getCoverage() + (1000*0.6));
+        setCoverage(getCoverage() + (0.6));
         setDiscount(getDiscount() + 25);
     }
 
