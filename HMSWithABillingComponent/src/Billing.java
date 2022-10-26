@@ -29,8 +29,11 @@ public class Billing  extends HealthInsurancePlan {
 
         HealthInsurancePlan patientInsurancePlan = patient.getInsurancePlan();
         if (patientInsurancePlan == null) {
+            payments[0] = 0;
             payments[1] = (amount - DEFAULT_DISCOUNT);
             return payments;
+        } else {
+            payments[0] = (amount * patientInsurancePlan.getCoverage()) + patientInsurancePlan.getDiscount();
         }
         if (patientInsurancePlan instanceof PlatinumPlan) {
             payments[1] = ((amount - patientInsurancePlan.getDiscount())- ((amount * patientInsurancePlan.getCoverage()) ));
