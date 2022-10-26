@@ -1,5 +1,7 @@
 public class HealthInsurancePlan {
     private double coverage;
+    private int discount;
+
     private InsuranceBrand offeredBy;
 
     public InsuranceBrand getOfferedBy() {
@@ -16,5 +18,13 @@ public class HealthInsurancePlan {
 
     public void setCoverage(double coverage) {
         this.coverage = coverage;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(int discount) {
+        this.discount = discount;
     }
 }
