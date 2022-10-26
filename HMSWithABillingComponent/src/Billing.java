@@ -29,7 +29,7 @@ public class Billing  extends HealthInsurancePlan {
 
         HealthInsurancePlan patientInsurancePlan = patient.getInsurancePlan();
         if (patientInsurancePlan == null) {
-            payments[0] = 0;
+            payments[0] = DEFAULT_DISCOUNT;
             payments[1] = (amount - DEFAULT_DISCOUNT);
             return payments;
         } else {
