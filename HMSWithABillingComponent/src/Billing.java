@@ -3,13 +3,6 @@ import java.util.Arrays;
 public class Billing  extends HealthInsurancePlan {
     static final int DEFAULT_DISCOUNT = 20;
 
-    public static void main(String[] args) {
-        HealthInsurancePlan insurancePlan = new BronzePlan();
-        User user = new User();
-        double[] payments1 = Billing.computeMonthPremium (user, 3000.0);
-        System.out.println(Arrays.toString(payments1));
-    }
-
     public static double[] computePaymentAmount(Patient patient, double amount) {
         double[] payments = new double[2];
 
@@ -36,16 +29,6 @@ public class Billing  extends HealthInsurancePlan {
         }
 
         return payments;
-    }
-
-    public static double[] computeMonthPremium(User user, double salary) {
-        double[] payments1 = new double[1];
-        HealthInsurancePlan userInsurancePlan = user.getInsurancePlan();
-        if (userInsurancePlan instanceof BronzePlan) {
-            payments1[0] = userInsurancePlan.computeMonthlyPremium(salary);
-        }
-        ;
-        return payments1;
     }
 
     @Override
