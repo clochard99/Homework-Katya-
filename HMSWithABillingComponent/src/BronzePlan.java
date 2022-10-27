@@ -5,4 +5,8 @@ public class BronzePlan extends HealthInsurancePlan{
         setDiscount(getDiscount() + 25);
     }
 
+    @Override
+    public double computeMonthlyPremium(double salary) {
+        return (salary*0.05);
+    }
 }

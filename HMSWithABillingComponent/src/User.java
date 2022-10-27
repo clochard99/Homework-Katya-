@@ -1,4 +1,6 @@
 public class User {
+    private HealthInsurancePlan insurancePlan;
+    private boolean insured;
     private long id;
     private String firstName;
     private String lastName;
@@ -42,5 +44,21 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    public boolean isInsured() {
+        return insured;
+    }
+
+    public void setInsured(boolean insured) {
+        this.insured = insured;
+    }
+
+    public void setInsurancePlan(HealthInsurancePlan insurancePlan) {
+        this.insurancePlan = insurancePlan;
+    }
+
+    public HealthInsurancePlan getInsurancePlan() {
+        return insurancePlan;
+    }
+
 }
 

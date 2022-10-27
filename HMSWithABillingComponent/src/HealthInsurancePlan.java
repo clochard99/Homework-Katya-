@@ -1,4 +1,4 @@
-public class HealthInsurancePlan {
+public abstract class HealthInsurancePlan {
     private double coverage;
     private int discount;
 
@@ -27,4 +27,5 @@ public class HealthInsurancePlan {
     public void setDiscount(int discount) {
         this.discount = discount;
     }
+    public abstract double computeMonthlyPremium(double salary);
 }
