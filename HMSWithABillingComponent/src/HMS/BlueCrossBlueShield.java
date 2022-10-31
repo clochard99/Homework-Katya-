@@ -11,14 +11,11 @@ public class BlueCrossBlueShield  implements InsuranceBrand {
         if (age > 55) {
             if (insurancePlan instanceof PlatinumPlan) {
                 premiumAge = 200;
-            }
-            if (insurancePlan instanceof GoldPlan) {
+            } else if (insurancePlan instanceof GoldPlan) {
                 premiumAge = 150;
-            }
-            if (insurancePlan instanceof SilverPlan) {
+            } else if (insurancePlan instanceof SilverPlan) {
                 premiumAge = 100;
-            }
-            if (insurancePlan instanceof BronzePlan) {
+            } else if (insurancePlan instanceof BronzePlan) {
                 premiumAge = 50;
             }
         }
@@ -30,14 +27,11 @@ public class BlueCrossBlueShield  implements InsuranceBrand {
         if (smoking) {
             if (insurancePlan instanceof PlatinumPlan) {
                 premiumSmoking = 100;
-            }
-            if (insurancePlan instanceof GoldPlan) {
+            } else if (insurancePlan instanceof GoldPlan) {
                 premiumSmoking = 90;
-            }
-            if (insurancePlan instanceof SilverPlan) {
+            } else if (insurancePlan instanceof SilverPlan) {
                 premiumSmoking = 80;
-            }
-            if (insurancePlan instanceof BronzePlan) {
+            } else if (insurancePlan instanceof BronzePlan) {
                 premiumSmoking = 70;
             }
         }

@@ -5,12 +5,15 @@ public class Billing  extends HealthInsurancePlan {
     static final int DEFAULT_DISCOUNT = 20;
     public static void main(String[] args) {
 
-        User staff = new User();
+
         InsuranceBrand insuranceBrand = new BlueCrossBlueShield();
-        HealthInsurancePlan insurancePlan = new PlatinumPlan();
+        HealthInsurancePlan insurancePlan = new BronzePlan();
         insurancePlan.setOfferedBy(insuranceBrand);
+
+        User staff = new User();
         staff.setInsurancePlan(insurancePlan);
-        System.out.println(insurancePlan.computeMonthlyPremium(5000, 53, true));
+        System.out.println(insurancePlan.computeMonthlyPremium(5000, 56, false));
+
         Patient patient = new Patient();
         double [] payments = Billing.computePaymentAmount(patient, 1230);
         System.out.println(Arrays.toString(payments));

@@ -4,8 +4,6 @@ public class Staff extends User{
     private int yearsOfExperience;
     private String description;
     private double salary;
-    private int age;
-    private boolean smoking;
 
 
     public long getStaffId() {
@@ -40,19 +38,4 @@ public class Staff extends User{
         this.salary = salary;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean isSmoking() {
-        return smoking;
-    }
-
-    public void setSmoking(boolean smoking) {
-        this.smoking = smoking;
-    }
 }
