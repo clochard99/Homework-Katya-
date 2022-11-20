@@ -23,7 +23,7 @@ public class Client {
                 while(true) {
                     message =sc.nextLine();
                     out.println(message);
-                    out.flush();
+                    //out.flush();
                 }
             }
         });

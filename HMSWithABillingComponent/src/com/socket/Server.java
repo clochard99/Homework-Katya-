@@ -18,8 +18,7 @@ public class Server {
         Socket client = ss.accept();
         System.out.println("A client has joined..");
         BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
-        //System.out.println("Client:" + "\u001B[35m" + exit + "\u001B[0m");
-        PrintWriter out = new PrintWriter(client.getOutputStream());
+        PrintWriter out = new PrintWriter(client.getOutputStream() , true);
         Thread receiver = new Thread(new Runnable() {
             String message;
             @Override
