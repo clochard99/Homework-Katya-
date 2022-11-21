@@ -6,7 +6,7 @@ public class PubDateAscComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book o1, Book o2) {
-        return (o1.getYear()).compareTo(o2.getYear());
+        return ((Book)o1).getYear().compareTo((Book)o2).getYear();
         }
 }
 
