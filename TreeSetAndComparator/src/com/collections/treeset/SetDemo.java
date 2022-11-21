@@ -1,5 +1,6 @@
 package com.collections.treeset;
 
+import java.net.Socket;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,6 +10,8 @@ public class SetDemo {
     public static void main(String[] args) {
         //hashSetDemo();
         treeSetDemo(null);
+        System.out.println("\u2764");
+        treeSetDemo(new PubDateDescComparator());
     }
 
     private static void hashSetDemo() {
@@ -34,7 +37,7 @@ public class SetDemo {
         Book book4 = new Book("Effective Java", "Joshua Bloch", 2008);
         Book book5 = new Book("The Last Lecture", "Randy Pausch", 2008);
 
-        Set<Book> books = new TreeSet<>();
+        Set<Book> books = new TreeSet<>(new PubDateDescComparator());
         books.add(book1);
         books.add(book2);
         books.add(book3);
