@@ -10,12 +10,7 @@ public class Book implements Comparable {
     private String author;
     private int year;
 
-    TitleComparator titleComparator = new TitleComparator() {
-        public int compare(Book o1, Book o2) {
-            return o1.getTitle().compareTo(o2.getTitle());
-        }
-    };
-    public static final Comparator<Book> TITLE_COMPARATOR = new Comparator<Book>() {
+    public static final Comparator<Book> TITLE_COMPARATOR = new TitleComparator() {
         @Override
         public int compare(Book o1, Book o2) {
             return o1.getTitle().compareTo(o2.getTitle());
