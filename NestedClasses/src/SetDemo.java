@@ -8,7 +8,7 @@ public class SetDemo {
         System.out.println(" ");
         treeSetDemo(new Book.PubDateComparators.PubDateDescComparator());
         System.out.println(" ");
-        treeSetDemo(new TitleComparator());
+        treeSetDemo(Book.TITLE_COMPARATOR);
     }
 
     public static Set<Book> treeSetDemo(Comparator<Book> comparator) {
