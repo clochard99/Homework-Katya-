@@ -7,10 +7,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
+public class Client1 {
     private Socket s;
     final Scanner sc = new Scanner(System.in);
-    public Client(String address, int port) throws IOException {
+    public Client1(String address, int port) throws IOException {
         System.out.println("Connecting...");
         s = new Socket(address,port);
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
@@ -23,14 +23,13 @@ public class Client {
                 while(true) {
                     message =sc.nextLine();
                     out.println(message);
-                    //out.flush();
                 }
             }
         });
         sender.start();
     }
     public static void main(String[] args) throws IOException {
-        Client client1 = new Client("localhost", 5699);
+        Client1 client1 = new Client1("localhost", 5699);
 
     }
 }
