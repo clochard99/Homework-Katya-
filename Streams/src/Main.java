@@ -3,7 +3,9 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class Main {
     public static void main(String[] args) {
@@ -132,6 +134,10 @@ public class Main {
                 .filter(c -> c.getCategory().contains("Notebook"))
                 .reduce((c1,c2) -> c1.getPrice() >= c2.getPrice() ? c1 : c2)
                 .ifPresent(c ->System.out.println("Highest priced product :" + c));
+        // Optional 
+        Optional<Product> opt = Optional.of(products.get(1));
+        System.out.println(opt.get());
+
     }
 
 }
